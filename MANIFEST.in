@@ -1,0 +1,3 @@
+include LICENSE.txt
+recursive-include foobar_package/static *
+recursive-include foobar_package/templates *
