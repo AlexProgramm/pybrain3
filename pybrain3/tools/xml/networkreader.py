@@ -37,7 +37,7 @@ class NetworkReader(XMLHandling):
     
     def readNetwork(self, node):
         # TODO: why is this necessary?
-        import pybrain.structure.networks.custom #@Reimport @UnusedImport
+        # import pybrain.structure.networks.custom #@Reimport @UnusedImport
         nclass = eval(str(node.getAttribute('class')))        
         argdict = self.readArgs(node)  
         n = nclass(**argdict)
@@ -112,5 +112,5 @@ class NetworkReader(XMLHandling):
         import string
         pnode = self.getChild(node, 'Parameters')        
         if pnode:                       
-            params = eval(string.strip(pnode.firstChild.data))
+            params = eval(str.strip(pnode.firstChild.data))
             m._setParameters(params)
