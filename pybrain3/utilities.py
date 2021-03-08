@@ -407,7 +407,7 @@ def n_to_one(arr):
 def canonicClassString(x):
     """ the __class__ attribute changed from old-style to new-style classes... """
     if isinstance(x, object):
-        return split(repr(x.__class__), "'")[1]
+        return str.split(repr(x.__class__), "'")[1]
     else:
         return repr(x.__class__)
     
